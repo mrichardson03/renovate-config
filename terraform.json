@@ -2,8 +2,8 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "github>mrichardson03/renovate-config:default",
-    "github>mrichardson03/renovate-config:github-actions",
-    ":enablePreCommit"
+    "github>mrichardson03/renovate-config:pre-commit",
+    "github>mrichardson03/renovate-config:github-actions"
   ],
   "packageRules": [
     {
@@ -19,7 +19,6 @@
       "description": "Group dev dependencies together and automerge",
       "groupName": "dev dependencies",
       "matchManagers": [
-        "pre-commit",
         "tflint-plugin"
       ],
       "matchUpdateTypes": [ "minor", "patch" ],

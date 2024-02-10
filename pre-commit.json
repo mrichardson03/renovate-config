@@ -1,0 +1,15 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    ":enablePreCommit"
+  ],
+  "packageRules": [
+    {
+      "description": "Group pre-commit hooks and automerge",
+      "groupName": "pre-commit hooks",
+      "matchManagers": [ "pre-commit" ],
+      "matchUpdateTypes": [ "minor", "patch" ],
+      "automerge": true
+    }
+  ]
+}

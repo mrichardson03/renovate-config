@@ -2,8 +2,8 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "github>mrichardson03/renovate-config:default",
-    "github>mrichardson03/renovate-config:github-actions",
-    ":enablePreCommit"
+    "github>mrichardson03/renovate-config:pre-commit",
+    "github>mrichardson03/renovate-config:github-actions"
   ],
   "packageRules": [
     {
@@ -20,15 +20,6 @@
       ],
       "matchUpdateTypes": [ "minor", "patch" ],
       "automerge": true
-    },
-    {
-      "description": "Group dev dependencies together and automerge",
-      "groupName": "dev dependencies",
-      "matchManagers": [
-        "pre-commit"
-      ],
-      "matchUpdateTypes": [ "minor", "patch" ],
-      "automerge": "true"
     }
   ]
 }
