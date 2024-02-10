@@ -7,34 +7,28 @@
   ],
   "packageRules": [
     {
-      "description": "Group dev dependencies into a single PR and automerge",
-      "groupName": "devDependencies",
-      "matchPackagePatterns": [
+      "description": "Group dev dependencies together and automerge",
+      "groupName": "dev dependencies",
+      "matchManagers": [
+        "poetry"
+      ],
+      "matchPackagePrefixes": [
         "black",
         "isort",
         "pytest",
         "flake8"
       ],
-      "matchUpdateTypes": [
-        "minor",
-        "patch"
-      ],
-      "managers": [
-        "poetry"
-      ],
+      "matchUpdateTypes": [ "minor", "patch" ],
       "automerge": true
     },
     {
-      "automerge": true,
-      "description": "Group dev dependencies into a single PR and automerge",
-      "groupName": "devDependencies",
-      "managers": [
+      "description": "Group dev dependencies together and automerge",
+      "groupName": "dev dependencies",
+      "matchManagers": [
         "pre-commit"
       ],
-      "matchUpdateTypes": [
-        "minor",
-        "patch"
-      ]
+      "matchUpdateTypes": [ "minor", "patch" ],
+      "automerge": "true"
     }
   ]
 }
