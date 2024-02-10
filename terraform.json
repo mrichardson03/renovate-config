@@ -8,7 +8,7 @@
   "packageRules": [
     {
       "description": "Group upstream modules together",
-      "groupName": "terraform-modules",
+      "groupName": "terraform modules",
       "matchManagers": [ "terraform" ],
       "matchPackagePrefixes": [
         "terraform-aws-modules"
@@ -16,14 +16,14 @@
       "matchUpdateTypes": ["minor", "patch"]
     },
     {
-      "automerge": true,
       "description": "Group dev dependencies together and automerge",
-      "groupName": "dev-dependencies",
+      "groupName": "dev dependencies",
       "matchManagers": [
         "pre-commit",
         "tflint-plugin"
       ],
-      "matchUpdateTypes": [ "minor", "patch" ]
+      "matchUpdateTypes": [ "minor", "patch" ],
+      "automerge": true
     }
   ]
 }
