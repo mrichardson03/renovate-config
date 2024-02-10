@@ -1,0 +1,40 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "github>mrichardson03/renovate-config:default",
+    ":enablePreCommit"
+  ],
+  "packageRules": [
+    {
+      "description": "Group dev dependencies into a single PR and automerge",
+      "groupName": "devDependencies",
+      "matchPackagePatterns": [
+        "black",
+        "isort",
+        "pytest",
+        "flake8"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ],
+      "managers": [
+        "poetry"
+      ],
+      "automerge": true
+    },
+    {
+      "automerge": true,
+      "description": "Group dev dependencies into a single PR and automerge",
+      "groupName": "devDependencies",
+      "managers": [
+        "github-actions",
+        "pre-commit"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ]
+    }
+  ]
+}
